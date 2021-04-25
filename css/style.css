@@ -19,9 +19,10 @@ body{
      color: white;
 }
 @media screen and (max-width:1640px){
+    
+    
     .main-container{
 
-        
         /* background-image: url('../images/lines-background.png') rgba(), url('../images/pipes-background.png');
         background-size: cover,cover;
         background-repeat: no-repeat,no-repeat;
@@ -61,6 +62,79 @@ body{
         padding: 3rem 0;
         
     }
+    .burger{
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+        width: max-content;
+        display: none;
+    
+    
+    }
+    .burger .line{
+        background-color: #A3A3A3;
+        height: 2px;
+        width: 22px;
+        
+    }
+    .line::before,.line::after{
+    
+        content: '';
+        position: absolute;
+        background-color: #A3A3A3;
+        height: 2px;
+        width: 22px;
+        
+    }
+    .line::before{
+    
+        margin-top: -6px;
+    
+    }
+    .line::after{
+    
+        margin-top: 6px;
+    
+    }
+    
+    .cross{
+    
+        display: flex;
+        width: max-content;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+        display: none;   
+    
+    
+      }
+      .diagonal{
+    
+          background-color: transparent;
+          height: 3px;
+          width: 24px;
+      }
+      .diagonal::before, .diagonal::after{
+      
+          content: '';
+          position: absolute;
+          background-color: black;
+          height: 1px;
+          width: 18px;
+      
+      }  
+       .diagonal::before{
+    
+          transform: rotate(45deg) translate(5px,-5px);
+    
+      }
+       .diagonal::after{
+    
+          transform: rotate(-45deg) translate(5px,5px);
+    
+      }
     header ul{
     
         list-style: none;
@@ -132,7 +206,7 @@ body{
         padding: 0 0.5rem;
         position: relative;
     }
-    .right-icons{
+    header .right-icons{
 
         position: relative;
     } 
@@ -188,11 +262,19 @@ body{
         font-family:Poppins,sans-serif;
         color: rgb(173, 171, 171);        
         text-align: center;
-        font-size: 14px;
+        font-size: 12px;
         position: relative;
-        max-width: 400px;
+        width: max-content;
+        
 
     } 
+    .slide-text .p1{
+        margin: auto;
+    }
+    .slide-text .p2{
+        max-width: 400px;
+        margin: auto;
+    }
     .slide-text .p1::before{
 
         content: "";
@@ -200,7 +282,7 @@ body{
         height: 1px;
         background-color: #E8C501;
         position: absolute;
-        left: 20px;
+        left: -30%;
         top: 50%;
         transform: translateY(-50%);
         
@@ -212,9 +294,9 @@ body{
         height: 1px;
         background-color: #E8C501;
         position: absolute;
-        right: 30px;
-        bottom: 0%;
-        transform: translateY(-1000%);
+        right: 15%;
+        bottom: 25%;
+        transform: translateY(100%);
         
     }
     .slide-text h1{
@@ -305,6 +387,7 @@ body{
 
         margin: 0;
     }
+    /* SECTION-2 */
     .sec-2{
 
         background: url('../images/jason-blackeye-10ui0BryWK8-unsplash.png');
@@ -312,5 +395,180 @@ body{
         background-repeat: no-repeat;
         background-position: center ;
         height: 600px;
+    }
+}
+
+@media screen and (max-width:1024px){
+  
+    .main-container::before,.main-container::after{
+        display: none;
+    }
+    header{
+
+        padding: 2rem 0;
+    }
+    header .logo a{
+        font-size: 28px;
+    }
+    .slider-container .slide{
+        padding: 4rem 0 8rem 0;
+    }
+    .slide-text h1{
+
+        font-size: 36px;
+    }
+  
+    .slider-container .slide-image{
+
+        width: 45%;
+    }
+    .slide .shop-now{
+
+        left: 25%;
+        bottom: 15%;
+    
+    }
+    .slide .shop-now button{
+
+        padding: 1rem 3rem;
+    }
+    .slide-text .p1{
+
+        /* max-width: 350px; */
+    }
+    .slide-text .p2{
+
+        max-width: 350px;
+    }
+    .slide-text .p1::before{
+    
+        /* left: 20px; */
+    }
+    .slide-text .p2::before{
+    
+        right: 5%;
+    }
+
+}
+@media screen and (max-width:950px){
+
+    .burger{
+        
+        display: flex;
+        margin: 0 2rem;
+    }
+    
+    header{
+
+        justify-content: space-between;
+    }
+    header ul{
+    
+        display:none;
+    }
+   
+    header .right-icons{
+
+        margin: 0 2rem 0 0;
+
+    }
+    .slider-container .slide-text{
+
+        width: 45%;
+    }
+    .slider-container .slide-image{
+
+        width: 40%;
+    }
+
+}
+@media screen and (max-width:768px){
+
+    .slider-container .slide{
+        flex-flow: column;
+        padding: 3rem 0 10rem 0;
+    }
+    .slider-container .slide-text
+    {
+        align-self: center;
+        margin: 0;
+        margin-top: 3rem;
+        width: 80%;
+
+    }   
+    .slider-container .slide-image
+    {
+        width: 45%;
+        align-self: center;
+        margin-left: -5%;
+        order: -1;
+    }   
+    .slider-container .shop-now{
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+
+    }
+   
+}
+
+@media screen and (max-width:425px){
+    
+    header .logo a{
+
+        font-size: 20px;
+    }
+    .slider-container .slide-text
+    {
+        width: 90%;
+    }
+    .slider-container .slide-image
+    {
+        width: 60%;
+    }
+    .slider-container .shop-now{
+    
+        transform: translateX(-50%);
+    }
+    .slide-text h1{
+
+        font-size: 24px;
+    }
+    .slick-dots{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:320px){
+
+    .slider-container .slide-image
+    {
+        margin-top: 2rem;
+    }
+    .slider-container .slide-text
+    {
+        margin-top: 3rem;
+    }
+    .slide-text .p1{
+        width: 250px;
+    }
+    .slide-text .p2{
+        max-width: 300px;
+        width: 100%;
+    }
+    .slide-text .p1::before{
+
+        left: -5%;
+        width: 30px;
+    }
+    .slide-text .p2::before{
+        right: -2%;
+        width: 30px;    
+    }
+    .slide .shop-now button{
+        padding: 1rem 2rem;
+    }
+    .slick-dots{
+        width: 35%;
     }
 }
