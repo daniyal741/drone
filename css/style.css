@@ -768,7 +768,7 @@ body{
    
     .flex-text .details .box div{
 
-        width: 25%;
+        width: 20%;
     }
     .flex-text .details div a{
         margin: 0;
@@ -787,6 +787,7 @@ body{
     .flex-text .details div a{
         margin-top: 1rem;
     }
+
 }
 
 @media screen and (max-width:320px){
@@ -828,4 +829,8 @@ body{
         width: 100%;
     }
     */
+
+    .experience{
+        background-position: left top;
+    }
 }
