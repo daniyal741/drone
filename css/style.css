@@ -21,10 +21,11 @@
     padding: 0;
     margin: 0;
 }
-body{
-    /* background-color:#010101; */ 
+html,body{
+    background-color:white; 
      /* color: #E8C501; */
      color: white;
+     overflow-x: hidden;
 }
 @media screen and (max-width:1640px){
     
@@ -41,6 +42,7 @@ body{
         background-size: cover,cover;
         background-position: left top ,center;
         position: relative;
+        height:inherit;
     }
     .main-container::before{
     
