@@ -753,6 +753,40 @@ body{
     .slick-dots{
         width: 25%;
     }
+
+    /* EXPERIENCE */
+   
+    .flex-text .title h1{
+        font-size: 36px;
+    }
+    .experience .main-flex .flex-text{
+        width: 90%;
+    }
+    .flex-text .details{
+        padding: 1rem 0;
+    }
+   
+    .flex-text .details .box div{
+
+        width: 25%;
+    }
+    .flex-text .details div a{
+        margin: 0;
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width:375px){
+
+    .flex-text .details .box{
+
+        width: 80%;
+    }
+
+    .flex-text .details div a{
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width:320px){
@@ -787,4 +821,11 @@ body{
     .slick-dots{
         width: 35%;
     }
+
+    /* EXPERIENCE */
+
+    /* .experience .main-flex .flex-text{
+        width: 100%;
+    }
+    */
 }
