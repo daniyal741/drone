@@ -25,7 +25,7 @@ html,body{
     background-color:white; 
      /* color: #E8C501; */
      color: white;
-     overflow-x: hidden;
+     width: 100%;
 }
 @media screen and (max-width:1640px){
     
@@ -42,7 +42,7 @@ html,body{
         background-size: cover,cover;
         background-position: left top ,center;
         position: relative;
-        height:inherit;
+        width: 100%;
     }
     .main-container::before{
     
@@ -150,11 +150,12 @@ html,body{
         list-style: none;
         display: flex;
         justify-content: space-evenly;
-        padding: 0 2rem
+        padding: 0 2rem;
     }
     header ul li{
     
         padding: 0 1rem;
+
     }
     header ul li a{
         text-decoration: none;
@@ -408,12 +409,14 @@ html,body{
         height: max-content;
         padding: 3rem 0;
 
+
     }
     .experience .main-flex{
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
-        width: 90%;
+        width: 100%;
+        margin: auto;
     }
     .experience .main-flex .flex-image{
 
