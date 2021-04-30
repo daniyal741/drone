@@ -908,6 +908,34 @@ html,body{
 
             display: none;
         }
+        .featured .slick-prev{
+            left: -50px;
+            transform: translateY(-100%);
+
+        }
+        .featured .slick-prev::before{
+
+            content: url('../images/left-2.png');
+            border: 1px solid #E8C501;
+            padding: 0.5rem;
+            position: absolute;
+            color: #E8C501;
+
+        }
+        .featured .slick-next{
+            right: -10px;
+            transform: translateY(-100%);
+
+        }
+        .featured .slick-next::before{
+
+            content: url('../images/right-2.png');
+            border: 1px solid #E8C501;
+            padding: 0.5rem;
+            position: absolute;
+            color: #E8C501;
+
+        }
 }
 
 @media screen and (max-width:1024px){
@@ -1206,6 +1234,14 @@ html,body{
         width: 50%;
         transform: translateX(10%);
     }
+
+    .model-container{
+        width: 85%;
+    }
+    .model-container .models .model{
+
+        margin: 1rem 0.5rem;
+    }
 }
 
 @media screen and (max-width:425px){
@@ -1258,9 +1294,45 @@ html,body{
       /* FEATURED */
 
       .featured .title {
-        width: 90%;
-        transform: translateX(8%);
+        width: 100%;
+        transform:translateX(0%);
+        margin: 0;
     }
+   .featured .title p{
+
+        width: 100%;
+        margin: 0;
+    } 
+    .featured .title p::before{
+
+        left: 27%;
+    }
+    .featured .title p::after{
+
+        right: 27%;
+    }
+    .featured .title h1{
+
+        width: 100%;
+        text-align: center;
+    }
+
+    .model-container{
+        width: 75%;
+    }
+    .model-container .models .model{
+        margin: 1rem 0.1rem;
+    }
+
+    .featured .slick-prev{
+        left: -53px;
+
+    }
+    .featured .slick-next{
+        right: -17px;
+
+    }
+    
 }
 
 @media screen and (max-width:375px){
@@ -1287,9 +1359,10 @@ html,body{
 
      /* FEATURED */
 
-     .featured .title {
-        width: 100%;
-    }
+     .featured .title h1{
+         font-size: 32px;
+     }
+     
 }
 
 @media screen and (max-width:320px){
@@ -1341,4 +1414,28 @@ html,body{
         width: 100%;
     }
    
+    /* FEATURED */
+
+    .featured .title p::before{
+        left: 20%;
+    }
+    .featured .title p::after{
+        right: 20%;
+    }
+    .featured .slick-prev{
+        left: -45px;
+
+    }
+    
+    .featured .slick-next{
+        right: -15px;
+
+    }
+    .featured .slick-next::before{
+        padding: 0.3rem;
+    }
+    .featured .slick-prev::before{
+        padding: 0.3rem;
+    }
+    
 }
