@@ -68,9 +68,10 @@ html,body{
     header{
         display: flex;
         flex-flow: row nowrap;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         padding: 3rem 0;
+        position: relative;
         
     }
     .burger{
@@ -146,13 +147,25 @@ html,body{
           transform: rotate(-45deg) translate(5px,5px);
     
       }
+      header .left-menu{
+    
+        width: 25%;
+        margin-left:auto;
+    }
+      header .right-menu{
+
+        display: flex;
+        margin-left: auto;
+        width: 40%;
+
+      }
     header ul{
     
         list-style: none;
         display: flex;
         justify-content: space-evenly;
-        padding: 0 2rem;
     }
+ 
     header ul li{
     
         padding: 0 1rem;
@@ -168,7 +181,9 @@ html,body{
     }
     header .logo{
     
-        position: relative;
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
         z-index: 100;
         
     }
@@ -369,7 +384,7 @@ html,body{
     .slick-dots{
 
         background-color: black;
-        width: 15%;
+        width: 10%;
         left: 50%;
         bottom: -23px;
         transform: translateX(-50%);
@@ -437,7 +452,7 @@ html,body{
         display: block;
         width: 100%;
     }
-    .experience .main-flex .flex-text{
+    .main-flex .flex-text{
 
         background-color: transparent;
         width: 45%;
@@ -461,7 +476,7 @@ html,body{
         color: #E8C501;
         font-size: 42px;
     }
-    .flex-text .title p::before{
+    .flex-text .title p:nth-child(1)::before{
 
         content: "";
         width: 50px;
@@ -473,7 +488,7 @@ html,body{
         transform: translateY(-50%);
         
     }
-    .flex-text .title p::after{
+    .flex-text .title p:nth-child(1)::after{
 
         content: "";
         width: 50px;
@@ -536,6 +551,135 @@ html,body{
         color: #E8C501;
     }
 
+        /* SECTION-3 */
+
+        .integrated{
+            
+            background: url('../images/jakob-owens-Xs44r00ubA8-unsplash.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            width: 100%;
+            height: max-content;
+            padding: 3rem 0;
+            margin-top: -1px;
+            position: relative;
+        }
+        .integrated::before{
+
+            content: '';
+            background: url('..//images/Rectangle7.png');
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 0;
+
+        }
+        .integrated .main-flex{
+
+            display: flex;
+            width: 95%;
+            margin: auto;
+            padding: 1rem 0 1rem 0;
+            justify-content: space-evenly;
+            position: relative;
+            z-index: 100;
+        }
+        .integrated .flex-text{
+
+            width: 65%;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            
+        }
+        .integrated .flex-text .title{
+        
+            width: 50%;
+        }
+        .integrated .flex-text .title p{
+
+            width: 45%;
+        }
+        .integrated .flex-text .title p:nth-child(1){
+            width: 50%;
+        }
+        .integrated .flex-text .details{
+
+            padding: 2rem 0 0 0;
+        }
+        .integrated .flex-text .details p{
+
+            font-family:Poppins-Light,sans-serif;
+            font-size: 14px;
+            color: white;
+            width: 80%;
+        }
+        .integrated .flex-text .details span{
+        
+            color: #E8C501;
+        }
+        .integrated .details .features{
+
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+        }
+        .integrated .details .features .ft{
+
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 20%;
+        }
+        .integrated .details .features .ft div{
+        }
+        .integrated .details .features .ft div img{
+            width: 100%;            
+        }
+        .integrated .details .features .ft p{
+            font-family:Poppins-Light,sans-serif;
+            font-size: 14px;
+            text-align: center;
+            color: rgb(233, 233, 233);
+
+        }
+        .integrated .details .features .ft span{
+
+            font-size: 16px;
+            font-family:Poppins,sans-serif;
+            padding: 1rem 0 0 0;
+        }
+
+        .integrated .shop-now button{
+
+        border-radius: 5px;
+        border: 1px solid #E8C501;
+        background-color: transparent;
+        color: #E8C501;
+        font-family:Poppins,sans-serif;
+        padding: 1rem 4rem;
+    }
+
+        .integrated .flex-image{
+
+            width: 45%;
+            background-color: white;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 3rem;
+        }
+        .integrated .flex-image img{
+
+            width: 100%;
+        }
+        
 }
 
 @media screen and (max-width:1024px){
@@ -546,7 +690,22 @@ html,body{
     header{
 
         padding: 2rem 0;
+        justify-content: space-between;
     }
+    header .left-menu{
+    
+        width: 0%;
+        margin-left:auto;
+        margin-right: 6rem;
+    }
+      header .right-menu{
+
+        display: flex;
+        margin-left: auto;
+        width: 40%;
+
+      }
+     
     header .logo a{
         font-size: 28px;
     }
@@ -602,11 +761,11 @@ html,body{
     .flex-text .title p{
         width: 80%;
     }
-    .flex-text .title p::before{
+    .flex-text .title p:nth-child(1):before{
 
         left: 20%;
     }
-    .flex-text .title p::after{
+    .flex-text .title p:nth-child(1):after{
 
         right: 20%;
     }
@@ -629,6 +788,25 @@ html,body{
 
         width: 100%;
     }
+    /* INTEGRATED */
+
+    .integrated .flex-text .title{
+        
+        width: 100%;
+    }
+    .integrated .flex-text .title p{
+
+        width: 89%;
+    }
+    .integrated .flex-text .title p:nth-child(1){
+        width: 90%;
+    }
+    .integrated .flex-text .title p:nth-child(1):before{
+        left: 30%;
+    }
+    .integrated .flex-text .title p:nth-child(1):after{
+        right: 30%;
+    }
 
 }
 @media screen and (max-width:950px){
@@ -638,7 +816,9 @@ html,body{
         display: flex;
         margin: 0 2rem;
     }
-    
+    .slider-container .slide{
+        padding: 2rem 0 6rem 0;
+    }
     header{
 
         justify-content: space-between;
@@ -647,7 +827,13 @@ html,body{
     
         display:none;
     }
-   
+    
+      header .right-menu{
+
+        display: flex;
+        justify-content: flex-end;
+
+      }
     header .right-icons{
 
         margin: 0 2rem 0 0;
@@ -682,11 +868,11 @@ html,body{
         margin: auto;
         width: max-content;
     }
-    .flex-text .title p::before{
+    .flex-text .title p:nth-child(1):before{
 
             left: -90%;
     }
-    .flex-text .title p::after{
+    .flex-text .title p:nth-child(1):after{
 
         right: -90%;
     }
@@ -701,6 +887,44 @@ html,body{
 
         display: block;
         margin: 1rem 0;
+    }
+
+    /* INTEGRATED */
+    .integrated .main-flex{
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .integrated .main-flex .flex-image{
+        order: -1;
+        width: 100%;
+    }
+    .integrated .main-flex .flex-image img{
+        
+        width: 60%;
+    }
+
+    .integrated .main-flex .flex-text{
+    
+        padding: 2rem 0;
+        width: 80%;
+    }
+    .integrated .flex-text .title p:nth-child(1){
+        margin: auto;
+        width: max-content;
+    }
+    .integrated .flex-text .title p:nth-child(1):after{
+        right: -90%;
+      
+    }
+    .integrated .flex-text .title p:nth-child(1)::before{left: -90%;}
+
+    .integrated .flex-text .details p:nth-child(1){
+        width: 80%;
+        margin: auto;
+    }
+    
+    .integrated .shop-now button{
+        padding: 1rem 2.5rem;
     }
 
 }
@@ -731,7 +955,10 @@ html,body{
         transform: translateX(-50%);
 
     }
-   
+    .slick-dots{
+
+        width: 18%;
+    }
 }
 
 @media screen and (max-width:425px){
@@ -794,6 +1021,16 @@ html,body{
         margin-top: 1rem;
     }
 
+    /* Integrated */
+    .integrated .details .features{
+
+        flex-wrap: wrap;
+    }
+    .integrated .details .features .ft{
+        
+        width: 45%;
+        padding-bottom: 2rem;
+    }
 }
 
 @media screen and (max-width:320px){
@@ -839,4 +1076,10 @@ html,body{
     .experience{
         background-position: left top;
     }
+
+    .integrated .flex-text .details p:nth-child(1){
+
+        width: 100%;
+    }
+   
 }
