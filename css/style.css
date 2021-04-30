@@ -1305,11 +1305,11 @@ html,body{
     } 
     .featured .title p::before{
 
-        left: 27%;
+        left: 25%;
     }
     .featured .title p::after{
 
-        right: 27%;
+        right: 25%;
     }
     .featured .title h1{
 
