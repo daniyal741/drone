@@ -782,33 +782,68 @@ html,body{
             align-items: center;
             padding: 1rem 0;
 
-        }
-        .model .colors > div{
 
+        }
+        .model input[type=radio]{
+
+            appearance: none;
+            border-radius: 50%;
             width: 10px;
             height: 10px;
-            background-color: #FFFFFF;
-            margin: 5px;
             border-radius: 50%;
+            background-color: #FFFFFF;
+            margin: 0 0.3rem;
+            padding: 0.3rem;
+            transition: 0.5s all ease-in-out linear;
+
+
+            
+        }
+        .model input[type=radio]:hover{
+
+            width: 12px;
+            height: 12px;
 
         }
-        .model .colors > div.active{
+        .model .colors #purple{
+            background-color: #2E3192;
+        }
+        .model .colors #red{
+            background-color: #FF0000;
+        }
+        .model .colors #white{
+            background-color: #FFFFFF;
+        }
+        .model .colors #blue{
+            background-color: #00BFF3;
+        }
+        .model .colors #black{
+            background-color: #000000;
+        }
+        .model .colors #yellow{
+            background-color: #FFBE0B;
+        }
+
+
+        .model .colors input[type=radio]:checked{
         
-            border: 3px solid black;
+            border: 2px solid black;
             box-shadow: 0 0 0 0.5px #E8C501;
-            padding: 0.3rem;
-           
         }
         .model .drone-img{
 
             width: 90%;
             padding: 3rem 0;
+            height: auto;
             margin: auto;
 
         }
         .model .drone-img img{
 
-            width: 100%;
+           max-width: 100%;
+           max-height: 100%;
+           object-fit: cover;
+
         }
 
         .model .rating{
