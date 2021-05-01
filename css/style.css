@@ -797,8 +797,12 @@ html,body{
             padding: 0.3rem;
             transition: 0.5s all ease-in-out linear;
             outline: none;
-
             
+        }
+        .model input[type=radio]:focus{
+
+            border: none;
+
         }
         .model input[type=radio]:hover{
 
