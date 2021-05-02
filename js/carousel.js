@@ -12,7 +12,7 @@ $('.slider').slick({
   });
 
   $('.models').slick({
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,

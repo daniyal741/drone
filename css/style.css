@@ -796,7 +796,7 @@ html,body{
             background-color: #FFFFFF;
             margin: 0 0.3rem;
             padding: 0.3rem;
-            transition: 0.5s all ease-in-out linear;
+            transition: 01s all ease-in-out linear;
             outline: none;
             
         }
@@ -922,12 +922,66 @@ html,body{
             transform: translateY(-20%);
         }
         .model .options div{
+
             margin: 1rem 0;
-            width: 60%;
-        }
-        .model .options div img{
-        
             width: 100%;
+        }
+
+        .model .options .setting input[type=checkbox]{
+
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: url('../images/setting.png');
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            mix-blend-mode: multiply;
+
+           
+        }
+        .model .options .heart{
+            background-color: transparent;
+        }
+        .model .options .heart input[type="checkbox"]{
+
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: url('../images/heart.png');
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .model .options .heart input[type=checkbox]:checked{
+
+            background-color: red;
+            /* clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  */
+            /* -webkit-filter: invert(100%) sepia(100%) saturate(100000%) hue-rotate(360deg) brightness(150%) contrast(122%); */
+        }
+        .model .options .eye input[type=checkbox]{
+
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: url('../images/eye.png');
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+           
+        }
+        .model .options .eye input[type=checkbox]:hover{
+
+            -webkit-filter: invert(60%) sepia(50%) saturate(100%) hue-rotate(40deg) brightness(150%) contrast(122%);
+
+
+        }
+        .model .options .eye input[type=checkbox]:checked{
+
+            -webkit-filter: invert(60%) sepia(50%) saturate(10000%) hue-rotate(50deg) brightness(150%) contrast(122%);
+
         }
         .model .sale{
 
