@@ -132,7 +132,7 @@ html,body{
       
           content: '';
           position: absolute;
-          background-color: black;
+          background-color: white;
           height: 1px;
           width: 18px;
       
@@ -777,7 +777,7 @@ html,body{
             height: 100%;
             
         }
-        .model .colors{
+         .colors{
             
             display: flex;
             justify-content: center;
@@ -786,7 +786,7 @@ html,body{
 
 
         }
-        .model input[type=radio]{
+         input[type=radio]{
 
             appearance: none;
             border-radius: 50%;
@@ -798,9 +798,10 @@ html,body{
             padding: 0.3rem;
             transition: 01s all ease-in-out linear;
             outline: none;
-            
+            cursor: pointer;
+
         }
-        .model input[type=radio]:focus{
+         input[type=radio]:focus{
 
             border: none;
 
@@ -811,32 +812,32 @@ html,body{
             height: 12px;
 
         }
-        .model .colors #purple{
+         .colors #purple{
             background-color: #2E3192;
         }
-        .model .colors #red{
+         .colors #red{
             background-color: #FF0000;
         }
-        .model .colors #white{
+         .colors #white{
             background-color: #FFFFFF;
         }
-        .model .colors #blue{
+         .colors #blue{
             background-color: #00BFF3;
         }
-        .model .colors #black{
+         .colors #black{
             background-color: #000000;
         }
-        .model .colors #yellow{
+         .colors #yellow{
             background-color: #FFBE0B;
         }
 
 
-        .model .colors input[type=radio]:checked{
+         .colors input[type=radio]:checked{
         
             border: 2px solid black;
             box-shadow: 0 0 0 0.5px #E8C501;
         }
-        .model .drone-img{
+         .drone-img{
 
             width: 90%;
             padding: 3rem 0;
@@ -844,7 +845,7 @@ html,body{
             margin: auto;
 
         }
-        .model .drone-img img{
+         .drone-img img{
 
             display: block;
             width: 220px;
@@ -854,22 +855,22 @@ html,body{
 
         }
 
-        .model .rating{
+         .rating{
             list-style: none;
             display: flex;
             justify-content: center;
             padding: 2rem 0 1rem 0;
         }
-        .model .rating li{
+         .rating li{
         
             display: block;
             
         }
-        .model .rating li img{
+         .rating li img{
             
             width: 80%;
         }
-        .model .drone-name{
+         .drone-name{
 
             font-family: Poppins,sans-serif;
             font-size: 16px;
@@ -908,8 +909,9 @@ html,body{
             font-family: Poppins-Light,sans-serif;
             color: #FFFFFF;
             font-size: 12px;
+            text-decoration: line-through;
         }
-        .model .options{
+         .options{
 
             display: flex;
             flex-flow: column nowrap;
@@ -921,13 +923,19 @@ html,body{
             right: 5%;
             transform: translateY(-20%);
         }
-        .model .options div{
+         .options div{
 
             margin: 1rem 0;
             width: 100%;
+
         }
 
-        .model .options .setting input[type=checkbox]{
+        .options input{
+
+            cursor: pointer;
+
+        }
+         .options .setting input[type=checkbox]{
 
             appearance: none;
             width: 20px;
@@ -940,31 +948,33 @@ html,body{
 
            
         }
-        .model .options .heart{
+         .options .heart{
             background-color: transparent;
+
+
         }
-        .model .options .heart input[type="checkbox"]{
+         .options .heart input[type="checkbox"]{
 
             appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             background: url('../images/heart.png');
             background-position: top left;
             background-repeat: no-repeat;
             background-size: contain;
+
         }
         
-        .model .options .heart input[type=checkbox]:checked{
+         .options .heart input[type=checkbox]:checked{
 
-            background-color: red;
-            /* clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  */
-            /* -webkit-filter: invert(100%) sepia(100%) saturate(100000%) hue-rotate(360deg) brightness(150%) contrast(122%); */
+            background: url('../images/heart-fill.png');
+            
         }
-        .model .options .eye input[type=checkbox]{
+         .options .eye input[type=checkbox]{
 
             appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             background: url('../images/eye.png');
             background-position: top left;
             background-repeat: no-repeat;
@@ -972,13 +982,8 @@ html,body{
 
            
         }
-        .model .options .eye input[type=checkbox]:hover{
-
-            -webkit-filter: invert(60%) sepia(50%) saturate(100%) hue-rotate(40deg) brightness(150%) contrast(122%);
-
-
-        }
-        .model .options .eye input[type=checkbox]:checked{
+    
+         .options .eye input[type=checkbox]:checked{
 
             -webkit-filter: invert(60%) sepia(50%) saturate(10000%) hue-rotate(50deg) brightness(150%) contrast(122%);
 
@@ -1034,8 +1039,114 @@ html,body{
 
         }
 
+        .pop-up{
+            
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(1, 1, 1, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            display: none;
+
+        }
+        .pop-up-content{
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #010101;
+            width: 75%;
+            padding: 0.5rem 0;
+            
+        }
+        .cross{
+
+            display: flex;
+            width: 100%;
+            padding: 1rem;
+        
+        }
+        .left-content{
+
+            width: 40%;
+            border: 1px solid #E8C501;
+            border-radius: 1px;
+            padding: 1rem 0;
+            position: relative;
+        }
+        .right-content{
+
+            font-family:Poppins,sans-serif;
+            width: 50%;
+
+        }
+        .right-content .name{
+
+            color: #E8C501;
+            font-size: 36px;
+
+        }
+        .right-content .price{
+        
+            color: #E8C501;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1;
+        
+        }
+        .right-content .price span{
+        
+            color: white;
+            text-decoration: line-through;
+            font-size: 26px;
+            margin-left: 0.5rem;
+        }
+
+        .right-content .desc{
+
+            font-family: Poppins-Light,sans-serif;
+            padding: 0.5rem 0;
+        }
+        .right-content .drone-info{
+
+            border-top: 1px solid #E8C501;
+            border-bottom: 1px solid #E8C501;
+            padding: 1rem 0;
+            font-family: Poppins-Light,sans-serif;
+        }
+
+        .right-content .drone-info p{
+
+
+        }
+        .right-content .drone-info p span{
+
+            color: #E8C501;
+        }
+        .right-content button{
+
+            background-color: #0B0B0B;
+            border-radius: 5px;
+            color: rgb(240, 240, 240);
+            border: 1px solid #E8C501;
+            padding: 1rem 3rem;
+            margin: 10rem 0.5rem 3rem 0.5rem;
+            font-family: Poppins-Light,sans-serif;
+
+        }
         /* VIEW */
 
+        .view{
+        
+        display: none;
+    }
         
 }
 
