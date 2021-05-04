@@ -41,5 +41,16 @@ $('.slider').slick({
     ]
     
   });
+
+  $('.view-selected-img').slick({
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay:false,
+    arrows:true,
+    
+  });
 });
 

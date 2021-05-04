@@ -983,7 +983,7 @@ html,body{
            
         }
     
-         .options .eye input[type=checkbox]:checked{
+         .options .eye input[type=checkbox]:hover{
 
             -webkit-filter: invert(60%) sepia(50%) saturate(10000%) hue-rotate(50deg) brightness(150%) contrast(122%);
 
@@ -1146,9 +1146,175 @@ html,body{
 
         .view{
         
-        display: none;
-    }
+            background-color: #000000;
+            
+        }
+        .view-container{
+
+            display: flex;
+        }
+        .view-thumbnails{
+
+            width: 10%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 10px;
+        }
+        .view-thumbnails div{
+
+            border: 1px solid #E8C223;
+            width: 90%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+        .view-thumbnails img{
+
+            width: 100%;
+            object-fit: cover;
+
+        }
+        .view-detail{
+
+            width: 85%;
+            display: flex;
+            height: max-content;
+            column-gap: 20px;
+        }
+        .view-selected-img{
+
+            width: 40%;
+            border: 1px solid #E8C223;
+            height: 450px;
+
+        }
+        .view-selected-img div{
+
+            width: 85%;
+            padding: 3rem 0 0 0rem;
+            margin: auto;
+        }
+        .view-selected-img img{
+
+            width: 100%;
+        }
+
+        .description{
+
+            font-family: Poppins,sans-serif;
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+        .description > *{
+            width: 100%;
+        }
+        .description .name{
+
+            font-size: 36px;
+            color: #E8C501;
+            width: 100%;
+        }
+        .description .price{
+
+            font-size: 30px;
+            font-family: Poppins,sans-serif;
+            font-weight: bold;
+            color: #E8C501;
+        }
+        .description .price span{
         
+            color: white;
+            margin: 0 1rem;
+            font-size: 26px;
+            text-decoration: line-through;
+        }
+        .description .desc{
+
+            color: white;
+            font-size: 14px;
+            font-family: Poppins-Light,sans-serif;
+            padding: 0.5rem 0;
+
+        }
+        .description .desc span{
+
+            text-decoration: none;
+            color: #E8C501;
+        }
+
+        .description  .drone-info{
+
+            border-top: 1px solid #E8C501;
+            border-bottom: 1px solid #E8C501;
+            padding: 1rem 0;
+            font-family: Poppins-Light,sans-serif;
+        }
+
+        .description  .drone-info p{
+
+
+        }
+        .description  .drone-info p span{
+
+            color: #E8C501;
+        }
+
+        .description .purchase{
+
+            align-self: flex-end;
+        
+        }
+        .description .quantity{
+
+            display: flex;
+            align-items: center;
+            
+        }
+        .description .quantity p{
+
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        .description .quantity button{
+
+            background-color: transparent;
+            color: #E8C501;
+            font-family: Poppins,sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            padding: 0.4rem 1rem;
+            border: 0.5px solid #E8C501;
+        }
+        .description .quantity .counter{
+
+            border-left: none;
+            border-right: none;
+            padding: 0.4rem 1.5rem;
+        }
+        .description .btns{
+
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2rem 0 0 0 ;
+        }
+        .description .btns button{
+
+            background-color: #0B0B0B;
+            border-radius: 5px;
+            width: 45%;
+            color: rgb(240, 240, 240);
+            border: 1px solid #E8C501;
+            padding: 0.7rem 4.5rem;
+            font-family: Poppins-Light,sans-serif;
+
+        }
+
+
 }
 
 @media screen and (max-width:1024px){
@@ -1288,6 +1454,25 @@ html,body{
         margin: 6rem 0.5rem 1rem 0.5rem;
     }
     
+    /* VIEW */
+
+
+    .view-selected-img{
+
+        width: 50%;
+    }
+    .view-selected-img div{
+
+        width: 65%;
+    }
+    .description .name{
+
+        font-size: 32px;
+    }
+    .description .btns button{
+
+        padding: 0.7rem 0rem;
+    }
 
 }
 @media screen and (max-width:950px){
@@ -1464,6 +1649,30 @@ html,body{
         margin: 1rem 0.5rem;
     }
 
+    /* VIEW */
+
+    .view-container{
+        flex-flow: column nowrap;
+    }
+    .view-thumbnails{
+        order: 2;
+        flex-flow: row nowrap;
+        width: 50%;
+        padding: 05px 0;
+        column-gap: 5px;
+    }
+    .view-thumbnails div{
+
+        height: 100px;
+    }
+    .view-detail{
+
+        width: 100%;
+    }
+    .description .name{
+
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width:425px){

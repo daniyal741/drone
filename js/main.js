@@ -75,10 +75,33 @@ $(document).ready(function(){
     $('.pop-up').on('click', '.cross' , function(){
 
       
+
+
       var res = $(this).parent().parent(); // returns the .pop-up object
+      var c1 = res.find('.colors').clone();
+      var c2 = res.find('.drone-img').clone();
+      var radio = c1.children().first();
+
+     
+
+      var model = $(this).parents().find('.model');
+      model.each( function() {
+         
+         var temp = $(this).find('.colors').children().first();
+         if(temp.attr('name')===radio.attr('name'))
+         {
+          
+
+            $(this).find('.colors').replaceWith(c1);
+            $(this).find('.drone-img').replaceWith(c2);
+
+            return false;
+      
+         }
+
+      });
+
       res.css('display','none');
-      res = $('input[name=eye]');
-      res.prop('checked', false);
 
 
     });
