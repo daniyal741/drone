@@ -1280,6 +1280,12 @@ html,body{
     .featured .title p{
         width: 60%;
     }
+
+    .right-content button{
+
+        padding: 1rem 2rem;
+        margin: 6rem 0.5rem 1rem 0.5rem;
+    }
     
 
 }
@@ -1407,6 +1413,8 @@ html,body{
         
         transform: translateX(10%);
     }
+
+
 }
 @media screen and (max-width:768px){
 
@@ -1454,6 +1462,7 @@ html,body{
 
         margin: 1rem 0.5rem;
     }
+
 }
 
 @media screen and (max-width:425px){
@@ -1544,7 +1553,31 @@ html,body{
         right: -17px;
 
     }
-    
+    .cross{
+
+        padding: 1rem 0;
+    }
+    .pop-up-content{
+
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .left-content,.right-content{
+        width: 100%;
+    }
+    .right-content{
+        padding-top: 2rem;
+    }
+    .btns{
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .right-content button{
+
+        margin: 4rem 0;
+        padding: 1rem 1.5rem;
+    }
 }
 
 @media screen and (max-width:375px){
