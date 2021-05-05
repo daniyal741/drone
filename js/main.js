@@ -169,10 +169,7 @@ $(document).ready(function(){
    //    });
 
    //    $(this).addClass('img-active');
-   //    e.preventDefault();
-   //    slideIndex = $(this).parents().find('.view-container .view-selected-img').index();
-   //    $( '.view-selected-img' ).slickGoTo( parseInt(slideIndex) );
-
+     
    // });
-   
+
 });

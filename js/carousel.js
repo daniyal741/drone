@@ -45,19 +45,20 @@ $('.slider').slick({
   $('.view-selected-img').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay:false,
+    autoplay:true,
     arrows:true,
-    asNavFor: '.view-thumbnails  div img',
+    asNavFor: '.view-thumbnails  .img-slide img',
   });
   $('.view-thumbnails .img-slide img').slick({
     dots: false,
     infinite: false,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay:false,
+    autoplay:true,
     arrows:false,
     asNavFor: '.view-selected-img',
     focusOnSelect: true,
@@ -74,7 +75,6 @@ $('.slider').slick({
     $('.view-thumbnails .img-slide').eq(mySlideNumber).addClass('img-active');
   });
 
-    
 
 });
 
