@@ -1788,6 +1788,38 @@ html,body{
         margin: 4rem 0;
         padding: 1rem 1.5rem;
     }
+
+    /* VIEW */
+    .view-detail{
+
+        flex-flow: column-reverse;
+        padding: 1rem 1rem 0 1rem;
+    }
+    .description{
+        justify-content: center;
+    }
+    .description .purchase{
+
+        padding: 1rem 0;
+    }
+    .description .quantity{
+        padding: 1rem 0;
+    }
+    .view-selected-img{
+
+        width: 90%;
+        height: 250px;
+        margin: auto;
+    }
+    .view-selected-img div{
+
+        padding: 1rem 0;
+    }
+    .view-thumbnails{
+
+        width: 90%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width:375px){
