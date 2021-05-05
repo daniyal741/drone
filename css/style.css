@@ -1172,6 +1172,10 @@ html,body{
             align-items: center;
             padding: 0.5rem;
         }
+        .view-thumbnails .img-active{
+
+            border: 1px solid #ffffff;
+        }
         .view-thumbnails img{
 
             width: 100%;
@@ -1190,9 +1194,10 @@ html,body{
             width: 40%;
             border: 1px solid #E8C223;
             height: 450px;
+            position: relative;
 
         }
-        .view-selected-img div{
+        .view-selected-img .img-slide{
 
             width: 85%;
             padding: 3rem 0 0 0rem;
@@ -1203,6 +1208,59 @@ html,body{
             width: 100%;
         }
 
+        .view-selected-img::before{
+
+            content: '';
+            width: 8%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            background-color: rgba(21, 21, 21, 1);
+            position: absolute;
+            z-index: 100;
+        }
+        .view-selected-img::after{
+            
+            content: '';
+            width: 8%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            background-color: rgba(21, 21, 21, 1);
+            position: absolute;
+            z-index: 100;
+
+        }
+        .view .slick-next{
+
+            z-index: 101;
+        }
+        .view .slick-next::before{
+
+            content: url(../images/right-2.png);
+            padding: 0.5rem;
+            position: absolute;
+            color: #E8C501;
+            right: 28px;
+            transform: translateY(-50%);
+        }
+        .view .slick-prev{
+
+            z-index: 101;
+        }
+        .view .slick-prev::before{
+
+            content: url(../images/left-2.png);
+            padding: 0.5rem;
+            position: absolute;
+            color: #E8C501;
+            left: 28px;
+            transform: translateY(-50%);
+
+        }
+       
         .description{
 
             font-family: Poppins,sans-serif;
@@ -1461,7 +1519,7 @@ html,body{
 
         width: 50%;
     }
-    .view-selected-img div{
+    .view-selected-img .img-slide{
 
         width: 65%;
     }
@@ -1811,7 +1869,7 @@ html,body{
         height: 250px;
         margin: auto;
     }
-    .view-selected-img div{
+    .view-selected-img .img-slide{
 
         padding: 1rem 0;
     }

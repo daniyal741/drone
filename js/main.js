@@ -106,4 +106,63 @@ $(document).ready(function(){
 
     });
 
+
+    var count = 0;
+   $('.view-selected-img').on('click', 'button', function(){
+
+
+      var slides = $(this).parent().find('.img-slide');
+      slides.each(function(){
+
+         
+         if($(this).attr('tabindex')==0)
+         {
+
+            var source1 = $(this).next().children().attr('src');
+            // console.log(source1);
+            var thumbnails = $(this).parents().find('.view-container > .view-thumbnails > div');
+            thumbnails.each(function(){
+               
+               if($(this).hasClass('img-active'))
+               {
+
+                  $(this).removeClass('img-active');
+               
+
+               }
+               if($(this).children().attr('src')== source1)
+               {
+
+                  $(this).addClass('img-active');
+                  
+               }
+            });
+  
+         }
+      });
+    });
+
+   $('.view-thumbnails').on('click', 'div', function(){
+    
+      var divs = $(this).parent().children();
+      divs.each(function(){
+               
+         if($(this).hasClass('img-active'))
+         {
+
+            $(this).removeClass('img-active');
+            var source1 = $(this).children().attr('src');
+            var slides = $(this).parents().find('.view-container  .img-slide');
+            // console.log(slides);
+            slides.each(function(){
+                     
+            });
+
+            
+
+         }
+      });
+
+      $(this).addClass('img-active');
+   });
 });
