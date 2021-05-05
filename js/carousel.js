@@ -50,7 +50,31 @@ $('.slider').slick({
     slidesToScroll: 1,
     autoplay:false,
     arrows:true,
-    
+    asNavFor: '.view-thumbnails  div img',
   });
+  $('.view-thumbnails .img-slide img').slick({
+    dots: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay:false,
+    arrows:false,
+    asNavFor: '.view-selected-img',
+    focusOnSelect: true,
+
+
+  });
+
+  $('.view-thumbnails .img-slide').removeClass('img-active');
+  $('.view-thumbnails .img-slide').first().addClass('img-active');
+
+  $('.view-selected-img').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.view-thumbnails .img-slide').removeClass('img-active');
+    $('.view-thumbnails .img-slide').eq(mySlideNumber).addClass('img-active');
+  });
+
+    
+
 });
 
