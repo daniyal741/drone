@@ -1188,15 +1188,15 @@ html,body{
             margin: 0rem auto 0.25rem auto;}  */
 
         .view-thumbnails .img-slide{
-            max-width: 20vw;
-            min-width: 9vw;
-            margin: 0rem auto 0.25rem auto;}
+            max-width: 100%;
+            min-width: 95%;
+            margin: 0rem auto 0.4rem auto;}
          
         .view-thumbnails .slick-list{
-            max-width: 20vw;
-            min-width: 9vw;
-            margin: 0rem auto 0.25rem auto;}
+            max-width: 100%;
+            min-width: 100%;
         
+        }        
         /* .view-thumbnails .draggable{
 
             width: 100%;
@@ -1209,7 +1209,8 @@ html,body{
             width: 85%;
             display: flex;
             height: max-content;
-            column-gap: 20px;
+            column-gap: 20px;            overflow: hidden;
+
         }
         .view-selected-img{
 
@@ -1555,19 +1556,21 @@ html,body{
         padding: 0.7rem 0rem;
     }
 
-    .view-thumbnails .img-slide{
-        max-width: 20vw;
-        min-width: 9vw;
-        margin: 0rem auto 0.25rem auto;}
-    
-     .view-thumbnails .slick-track{
-         max-width: 0vw;
-         min-width: 100%;
-         margin: 0rem auto 0.25rem auto;} 
     .view-thumbnails .slick-list{
-        max-width: 20vw;
-        min-width: 9vw;
-        margin: 0rem auto 0.25rem auto;}
+
+        min-width: 100%
+    }
+    .view-thumbnails .slick-track{
+        min-width: 100%;
+        margin: auto;
+    }
+   
+    .view-thumbnails .img-slide{
+
+        max-width: 100%;
+        min-width: 93%;
+
+    }
 
 }
 @media screen and (max-width:950px){
@@ -1761,19 +1764,25 @@ html,body{
         height: 80px;
     }
     
-    .view-thumbnails .img-slide{
-        max-width: 10vw;
-        margin: 0rem auto 0.25rem auto;}
-     
+    .view-thumbnails .slick-list{
+
+        min-width: 95%
+    }
     .view-thumbnails .slick-track{
         
-        max-width: 0vw;
-        min-width: 70vw;
-        margin: auto;} 
-    .view-thumbnails .slick-list{
-        max-width: 38vw;
-        min-width: 80vw;
-        margin: 0rem auto 0.25rem auto;}
+        min-width: 80%;
+        max-width: 70%;
+        margin: auto;
+    }
+   
+    .view-thumbnails .img-slide{
+
+        max-width: 22%;
+        min-width: 22%;
+        margin: 0 0 0 0.2rem;
+
+    }
+
     .view-detail{
 
         width: 100%;
@@ -1930,21 +1939,20 @@ html,body{
         width: 80%;
         margin: auto;
     }
-    .view-thumbnails .img-slide{
-        max-width: 20vw;
-        min-width: 8vw;
-        margin: 0rem auto 0.25rem auto;}
-     
     .view-thumbnails .slick-list{
-        max-width: 90vw;
-        min-width: 90vw;
-        margin: auto;}
 
-         .view-thumbnails .slick-track{
-            
-            max-width: 80vw;
-            min-width: 100vw;
-            margin: auto;} 
+        min-width: 95%
+    }
+    .view-thumbnails .slick-track{
+        min-width: 95%;
+        margin: auto;
+    }
+   
+    .view-thumbnails .img-slide{
+
+        max-width: 23%;
+        min-width: 23%;
+    }
 
 }
 
@@ -2068,4 +2076,21 @@ html,body{
         margin: auto;
         padding: 3rem 0;
     }
+    .view-thumbnails .slick-list{
+
+        min-width: 80%
+    }
+    .view-thumbnails .slick-track{
+        max-width: 95%;
+        min-width: 90%;
+        margin: auto;
+    }
+   
+    .view-thumbnails .img-slide{
+
+        max-width: 23%;
+        min-width: 23%;
+    }
+   
+
 }

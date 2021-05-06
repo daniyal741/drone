@@ -173,5 +173,4 @@ $(document).ready(function(){
      
    // });
 
-   console.log($(this).find('.view-thumbnails .img-slide').parent().parent().parent());
 });
