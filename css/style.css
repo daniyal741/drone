@@ -1171,6 +1171,7 @@ html,body{
             justify-content: center;
             align-items: center;
             padding: 0.5rem;
+            cursor: pointer;
         }
         .view-thumbnails .img-active{
 
@@ -1180,14 +1181,28 @@ html,body{
 
             width: 100%;
             object-fit: cover;
-
         }
-        .view-thumbnails .slick-slide:first-child img {
-            margin-left: 0;
-          }
-          .view-thumbnails .slick-slide:last-child img {
-            margin-right: 0;
-          }
+        /* .view-thumbnails .slick-track{max-width: 20vw;
+            min-width: 9vw;
+            margin: 0rem auto 0.25rem auto;}  */
+
+        .view-thumbnails .img-slide{
+            max-width: 20vw;
+            min-width: 9vw;
+            margin: 0rem auto 0.25rem auto;}
+         
+        .view-thumbnails .slick-list{
+            max-width: 20vw;
+            min-width: 9vw;
+            margin: 0rem auto 0.25rem auto;}
+        
+        /* .view-thumbnails .draggable{
+
+            width: 100%;
+            max-width: 20vw;
+            min-width: 9vw;
+            margin: 0rem auto 0.25rem auto;
+        } */
         .view-detail{
 
             width: 85%;
@@ -1728,8 +1743,18 @@ html,body{
     }
     .view-thumbnails .img-slide{
 
-        height: 100px;
+        height: 80px;
     }
+    
+    .view-thumbnails .img-slide{
+        max-width: 20vw;
+        min-width: 9vw;
+        margin: 0rem auto 0.25rem auto;}
+     
+    .view-thumbnails .slick-list{
+        max-width: 38vw;
+        min-width: 30vw;
+        margin: 0rem auto 0.25rem auto;}
     .view-detail{
 
         width: 100%;
@@ -1738,6 +1763,7 @@ html,body{
 
         font-size: 28px;
     }
+
 }
 
 @media screen and (max-width:425px){
@@ -1882,9 +1908,25 @@ html,body{
     }
     .view-thumbnails{
 
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
+    .view-thumbnails .img-slide{
+        max-width: 20vw;
+        min-width: 8vw;
+        margin: 0rem auto 0.25rem auto;}
+     
+    .view-thumbnails .slick-list{
+        max-width: 90vw;
+        min-width: 90vw;
+        margin: auto;}
+
+         .view-thumbnails .slick-track{
+            
+            max-width: 80vw;
+            min-width: 100vw;
+            margin: auto;} 
+
 }
 
 @media screen and (max-width:375px){

@@ -106,6 +106,7 @@ $(document).ready(function(){
 
     });
 
+    //My Code Code for Sync-Sliders
 
    // $('.view-selected-img').on('click', 'button', function(){
 
@@ -172,4 +173,5 @@ $(document).ready(function(){
      
    // });
 
+   console.log($(this).find('.view-thumbnails .img-slide').parent().parent().parent());
 });
