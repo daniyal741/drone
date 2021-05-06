@@ -173,4 +173,31 @@ $(document).ready(function(){
      
    // });
 
+   $('.view').on('click', 'button#minus, button#plus', function(){
+
+      var sum = 0;//int value
+
+      var counter = parseInt($(this).parent().find('.counter').html()); //value
+      if($(this).attr('id')=='plus'){
+         sum = counter + 1;
+
+      }
+      else{
+         sum = counter - 1;
+
+      }
+
+      if(sum>0)
+      {
+
+         $(this).parent().find('.counter').html(sum);
+
+      }
+      else{
+
+         alert('Invalid Input')
+      }
+
+
+   });
 });

@@ -1371,7 +1371,17 @@ html,body{
             font-size: 17px;
             padding: 0.4rem 1rem;
             border: 0.5px solid #E8C501;
+            transition: 0.1s all linear;
+            
         }
+        .description .quantity button#plus:hover,button#minus:hover {
+
+            background-color: #E8C501;
+            color: black;
+            cursor: pointer;
+        
+        }
+       
         .description .quantity .counter{
 
             border-left: none;
