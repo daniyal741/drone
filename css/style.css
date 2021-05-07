@@ -21,6 +21,8 @@
     padding: 0;
     margin: 0;
     outline: none;
+    scroll-behavior: smooth;
+    
 }
 html,body{
     background-color:white; 
@@ -963,6 +965,7 @@ html,body{
             background-position: top left;
             background-repeat: no-repeat;
             background-size: contain;
+            position: relative;
 
         }
         
@@ -970,6 +973,31 @@ html,body{
 
             background: url('../images/heart-fill.png');
             
+        }
+        .options .heart input[type="checkbox"]::before{
+            
+            content: 'add to Wishlist';
+            position: absolute;
+            top: -32px;
+            left: -45px;
+            font-family: Poppins-Light,sans-serif;
+            font-size: 12px;
+            border-radius: 2px;
+            border: 1px solid white;
+            width: 100px;
+            height: 13px;
+            padding: 0.25rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E8C501;
+            background: rgba(0, 0, 0,8); 
+            display: none;
+            transition: all 1s;
+
+        }
+        .options .heart input[type="checkbox"]:hover::before{
+            display: flex;
         }
          .options .eye input[type=checkbox]{
 
@@ -980,14 +1008,44 @@ html,body{
             background-position: top left;
             background-repeat: no-repeat;
             background-size: contain;
+            position: relative;
 
            
         }
     
          .options .eye input[type=checkbox]:hover{
 
-            -webkit-filter: invert(60%) sepia(50%) saturate(10000%) hue-rotate(50deg) brightness(150%) contrast(122%);
+            background: url('../images/view.png');
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: contain;
 
+        }
+
+        .options .eye input[type="checkbox"]::before{
+            
+            content: 'Quick View';
+            position: absolute;
+            top: -33px;
+            left: -25px;
+            font-family: Poppins-Light,sans-serif;
+            font-size: 12px;
+            border-radius: 2px;
+            border: 1px solid white;
+            width: 80px;
+            height: 13px;
+            padding: 0.25rem 0.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E8C501;
+            background: rgba(0, 0, 0,8); 
+            display: none;
+
+
+        }
+        .options .eye input[type="checkbox"]:hover::before{
+            display: flex;
         }
         .model .sale{
 
