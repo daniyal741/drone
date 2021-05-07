@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-    $('.featured').on('change', 'input:radio',function(){
+   $('.featured').on('change', 'input:radio',function(){
 
         if($(this).attr('id')==='purple')
         {
@@ -42,35 +42,33 @@ $(document).ready(function(){
      
     });
 
-    $('.featured').on('click', '.model #eye', function(){
+   $('.featured').on('click', '.model #eye', function(){
 
+   var pop_up = $(this).parents('.featured').children('.pop-up');
+   pop_up.find('.left-content').empty();
+   // pop_up.find('.right-content').empty();
 
+   
 
-      var pop_up = $(this).parents('.featured').children('.pop-up');
-      pop_up.find('.left-content').empty();
-      // pop_up.find('.right-content').empty();
+   var res = $(this).parents('.model');
+   var clone1 = res.clone();
+   
+   clone1.removeClass();
+   clone1.addClass('model');
+   clone1.find('.options').remove();
+   clone1.find('.price').remove();
+   clone1.css('width','100%');
+   pop_up.find('.left-content').append(clone1); // pop_up = left-content
 
-    
+   pop_up.slideDown('slow');
+   
+   pop_up.css({
 
-      var res = $(this).parents('.model');
-      var clone1 = res.clone();
-     
-      clone1.removeClass();
-      clone1.addClass('model');
-      clone1.find('.options').remove();
-      clone1.find('.price').remove();
-      clone1.css('width','100%');
-      pop_up.find('.left-content').append(clone1); // pop_up = left-content
-
-
-      pop_up.css({
-
-         display: 'flex'
-         
-     });  // used to add multiple css attributes.
-
-
-    });
+      display: 'flex'
+      
+         });  // used to add multiple css attributes.
+   });
+   
 
     $('.pop-up').on('click', '.cross' , function(){
 
@@ -100,8 +98,9 @@ $(document).ready(function(){
          }
 
       });
+      res.slideUp('slow');
 
-      res.css('display','none');
+      // res.css('display','none');
 
 
     });
