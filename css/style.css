@@ -21,7 +21,7 @@
     padding: 0;
     margin: 0;
     outline: none;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     
 }
 html,body{
@@ -1206,7 +1206,8 @@ html,body{
         .view{
         
             background-color: #000000;
-            
+            margin-top: -2px;
+            padding: 4rem 0 0 0;
         }
         .view-container{
 
@@ -1319,6 +1320,8 @@ html,body{
         .view .slick-next{
 
             z-index: 101;
+            right: 0px;
+
         }
         .view .slick-next::before{
 
@@ -1326,12 +1329,13 @@ html,body{
             padding: 0.5rem;
             position: absolute;
             color: #E8C501;
-            right: 28px;
+            right: 0px;
             transform: translateY(-50%);
         }
         .view .slick-prev{
 
             z-index: 101;
+            left: 0px;
         }
         .view .slick-prev::before{
 
@@ -1339,7 +1343,7 @@ html,body{
             padding: 0.5rem;
             position: absolute;
             color: #E8C501;
-            left: 28px;
+            left: 0px;
             transform: translateY(-50%);
 
         }
@@ -1522,6 +1526,118 @@ html,body{
             width: 45%;
         }
 
+        /* Footer */
+
+        footer{
+
+           background-color: #1C1C1C; 
+        }
+        .footer-container{
+
+            background-color: #000000;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 5rem 0;
+        }
+        .footer-container > div{
+
+            width: 15%;
+        }
+        .footer-container h3,p,a,span{
+
+            font-family:Poppins,sans-serif;
+            color: white;
+
+        }
+       
+        .footer-container > div h3{
+
+            font-size: 18px;
+            color: #E8C501;
+            letter-spacing: 2px;
+            padding-bottom:1rem;
+             
+        }
+        .footer-container .social-icons{
+
+            width: 15%;
+            display: flex;
+            justify-content: flex-end;
+            align-self: center;
+            padding-top: 0.2rem;
+            transform: translateY(50%);
+
+        }
+        .social-icons img{
+
+            display: block;
+            margin: 0 0.25rem;
+        }
+        .footer-container .contact{
+            width: 15%;
+        }
+        .footer-container .contact p{
+            font-size: 14px;
+        }
+        .footer-container .contact span{
+
+            display: block;
+ 
+         }
+        .footer-container .tweets{
+            width: 20%;
+        }
+        .footer-container .tweets p{
+
+            font-size: 14px;
+            color: white;
+            width: 90%;
+            
+        }
+        .footer-container .tweet{
+
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+            padding-bottom: 1rem;
+
+        }
+        .footer-container .tweet img{
+
+            width: 14px;
+            height: 12px;
+            margin-right: 0.4rem;
+            position: relative;
+            top: 4px;
+
+        }
+        .footer-container .tweets span{
+
+            font-size: 10px;
+            color: white;
+            width: 100%;
+            padding: 0.2rem 0;
+            display: block;
+            
+        }
+        .footer-container .news{
+            width: 20%;
+        }
+        .footer-container .news p{
+
+            font-size: 14px;
+
+        }
+
+        .copy p{
+
+            text-align: center;
+            font-size: 12px;
+            padding: 1rem 0;
+        }
+
 }
 
 @media screen and (max-width:1024px){
@@ -1663,6 +1779,11 @@ html,body{
     
     /* VIEW */
 
+    .view{
+
+        padding: 2rem 0;
+
+    }
 
     .view-selected-img{
 
@@ -1695,6 +1816,33 @@ html,body{
         max-width: 100%;
         min-width: 93%;
 
+    }
+    
+    .view .slick-prev::before{
+
+        left: -5px;
+    }
+    
+    .view .slick-next::before{
+        
+        right: -5px;
+    }
+
+    /* Footer */
+
+    .footer-container .social-icons{
+
+        width: 15%;
+        transform: translateY(-100%);
+        padding: 0;
+    }
+    .footer-container .contact{
+
+        width: 15%;
+    }
+    .footer-container .tweet p{
+    
+        width: 85%;
     }
 
 }
@@ -1823,6 +1971,11 @@ html,body{
         transform: translateX(10%);
     }
 
+    .pop-up-content button{
+
+        margin: 1rem 0;
+    }
+
 
 }
 @media screen and (max-width:768px){
@@ -1859,6 +2012,9 @@ html,body{
 
     /* FEATURED */
 
+    .pop-up-content{
+        width: 80%;
+    }
     .featured .title {
         width: 50%;
         transform: translateX(10%);
@@ -1870,6 +2026,11 @@ html,body{
     .model-container .models .model{
 
         margin: 1rem 0.5rem;
+    }
+    .pop-up-content button{
+
+        margin: 4rem 0 0 0;
+        padding: 1rem 1.5rem;
     }
 
     /* VIEW */
@@ -1922,6 +2083,27 @@ html,body{
         width: 98%;
         flex-flow: row wrap;
 
+    }
+
+    /* Footer */
+
+    .footer-container{
+        flex-wrap: wrap;
+    }
+    .footer-container .social-icons{
+
+        width: 20%;
+    }
+    .footer-container .contact{
+        width: 20%;
+    }
+    .footer-container .tweets{
+
+        width: 40%;
+    }
+    .footer-container .news{
+
+        width: 40%;
     }
 }
 
@@ -2039,6 +2221,7 @@ html,body{
         padding: 1rem 1.5rem;
     }
 
+   
     /* VIEW */
     .view-detail{
 
@@ -2091,6 +2274,41 @@ html,body{
         font-size: 28px;
         text-align: center;
         padding: 1rem 0;
+
+    }
+
+    
+
+    /* Footer */
+    .footer-container{
+
+        padding: 3rem 0 1rem 0;
+    }
+    .footer-container .social-icons{
+
+        width: 80%;
+        order: 4;
+        justify-content: center;
+        transform: translateY(0%);
+        padding-top: 2rem;
+    }
+    .footer-container .contact{
+        width: 80%;
+        order: 3;
+
+    }
+    .footer-container .tweets{
+
+        width: 80%;
+        order: 2;
+        padding-top: 1rem;
+
+
+    }
+    .footer-container .news{
+
+        width: 80%;
+        order: 1;
 
     }
 
@@ -2214,11 +2432,11 @@ html,body{
 
         width: 80%;
         margin: auto;
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
     .view-thumbnails .slick-list{
 
-        min-width: 80%
+        min-width: 95%
     }
     .view-thumbnails .slick-track{
         max-width: 95%;
@@ -2232,5 +2450,17 @@ html,body{
         min-width: 23%;
     }
    
+    .view .slick-prev::before{
+
+        left: 1px;
+        padding: 0;
+    }
+    
+    .view .slick-next::before{
+        
+        padding: 0;
+        right: 1px;
+    }
+    
 
 }
